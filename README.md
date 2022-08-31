@@ -1,1 +1,1 @@
-# frontend-group-3-project
+# GROUP 3 PROJECT
