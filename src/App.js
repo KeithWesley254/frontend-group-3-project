@@ -2,6 +2,10 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './Components/Header';
 import HomePage from './Pages/HomePage';
+import StudentsPage from './Pages/StudentsPage';
+import TeachersPage from './Pages/TeachersPage';
+import AboutPage from './Pages/AboutPage';
+import CoursesPage from './Pages/CoursesPage';
 
 function App() {
   return (
@@ -10,6 +14,10 @@ function App() {
       <Header />
       <Routes>
         <Route exact='true' path='/' element={<HomePage />}/>
+        <Route path='/teachers' element={<TeachersPage />}/>
+        <Route path='/courses' element={<CoursesPage />}/>
+        <Route path='/students' element={<StudentsPage />}/>
+        <Route path='/about' element={<AboutPage />}/>
       </Routes>
     </div>
     </BrowserRouter>
