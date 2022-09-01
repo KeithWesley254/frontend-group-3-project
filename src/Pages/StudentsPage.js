@@ -6,18 +6,30 @@ const StudentsPage = () => {
   const [data, setData] = useState([]);
 
   //custom hook
-  function useFectchStudents() {
-    
-       useEffect(() => {
-         fetch("http://localhost:3000/students")
-           .then((res) => res.json())
-           .then((data) => setData(data));
-       }, []);
-  }
+  // function useFectchStudents()
+  
+    //CRUD
+    const getData = () => {
+      fetch("http://localhost:3004/students")
+        .then((res) => res.json())
+        .then((data) => setData(data));
+    };
+    useEffect(() => {
+      getData()
+    }, []);
+  
+  
+   function handleClick() {
+     getData();
+   }
 
   return (
-    <div>StudentsPage</div>
-  )
+    <div>
+      <h1>StudentsPage</h1>
+      <button onClick={handleClick}>Add Student</button>
+      
+    </div>
+  );
 }
 
 export default StudentsPage
