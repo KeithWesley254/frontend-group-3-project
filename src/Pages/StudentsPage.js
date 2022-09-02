@@ -50,8 +50,8 @@ const StudentsPage = () => {
         </TableRow>
       </TableHead>
       <TableBody>
-        {url.map((data) => (
-          <TableRow>
+        {data.map((data) => (
+          <TableRow key={data.id}>
             <TableCell>{data.id}</TableCell>
             <TableCell>{data.name}</TableCell>
             <TableCell>{data.course_id}</TableCell>
