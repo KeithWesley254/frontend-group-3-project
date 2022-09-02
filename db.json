@@ -1,0 +1,22 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Mario Abdul",
+      "course_id": "1",
+      "teacher_id": "1"
+    },
+    {
+      "id": 2,
+      "name": "Merlin White",
+      "course_id": "1",
+      "teacher_id": "2"
+    },
+    {
+      "id": 3,
+      "name": "Kimberly Rane",
+      "course_id": "2",
+      "teacher_id": "2"
+    }
+  ]
+}
