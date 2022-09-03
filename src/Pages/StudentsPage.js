@@ -48,14 +48,6 @@ const StudentsPage = () => {
   
 
   return (
-    <>
-      <Table style={tableStyle}>
-        <TableHead>
-          <TableRow style={{ fontSize: "18px" }}>
-            <TableCell>ID</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Course ID</TableCell>
-            <TableCell>Teacher ID</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
