@@ -34,8 +34,8 @@ const StudentsPage = () => {
 
   //Styling..
   const tableStyle = {
-    width: "80%",
-    margin: "50px 100px 100px 140px",
+    width: "100%",
+    margin: "20px 10%"
   }
   
 
