@@ -2,6 +2,7 @@ import { LinearProgress, Typography, Box, Button, FormControl, FormHelperText, I
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Container } from '@mui/system';
+import TeachersDetails from '../Components/TeachersDetails';
 
 const SpecificTeacher = () => {
     const { id } = useParams();
@@ -55,7 +56,11 @@ const SpecificTeacher = () => {
       }
 
     if (!teacherDetails) return <LinearProgress style={{backgroundColor: "gold"}} />;
-    
+
+    //all students a teacher has
+    const all_students = teacherDetails.students.map((student) => student.name)
+      console.log(all_students)
+      
     return (
         <div>
             <div>
@@ -137,6 +142,16 @@ const SpecificTeacher = () => {
                         &nbsp; &nbsp;
                         <Typography variant="h5">
                             {teacherDetails.salary}
+                        </Typography>
+                    </span>
+                    <br />
+                    <span style={{ display: "flex" }}>
+                        <Typography variant="h5" className="teach4" style={{fontWeight: 'bold'}}>
+                            Students:
+                        </Typography>
+                        &nbsp; &nbsp;
+                        <Typography variant="h5">
+                            {all_students.map((student) => <p>{student}</p>)}
                         </Typography>
                     </span>
                 </div>
