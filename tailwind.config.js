@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'averia': ['Averia Serif Libre'],
+        'poppins': ['Poppins']
+      }
+    },
   },
   plugins: [],
 }
