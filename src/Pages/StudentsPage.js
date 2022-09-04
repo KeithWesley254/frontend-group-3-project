@@ -7,7 +7,7 @@ import { Table, TableCell, TableRow, TableHead, TableBody, Button } from "@mui/m
 const StudentsPage = () => {
   const [data, setData] = useState([]);
 
-  const url = ' http://localhost:3004/students'
+  const url = ' https://group-3-backend-app.herokuapp.com/students'
 
   //custom hook
   // function useFetchStudents()
@@ -16,7 +16,10 @@ const StudentsPage = () => {
     const getData = () => {
       fetch(url)
         .then((res) => res.json())
-        .then((data) => setData(data));
+        .then((data) => {
+          console.log(data)
+          setData(data)
+        });
     };
     useEffect(() => {
       getData()

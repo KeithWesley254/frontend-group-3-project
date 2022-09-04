@@ -8,7 +8,7 @@ const Header = () => {
     <div>
       <div className='flex justify-between p-8 fixed w-full text-gray-600 bg-blue-300'>
         <div className='text-3xl font-large'>
-            <NavLink to="/logo">School Management System</NavLink>
+            <NavLink to="/" exact="true">Dragonballs University Portal</NavLink>
         </div>
         <div className='text-xl'>
             <NavLink to="/" exact="true" className='mr-10 hover:text-white'>Home</NavLink>
