@@ -1,9 +1,11 @@
-import React from 'react'
+import { LinearProgress } from '@mui/material'
+import React, { useEffect, useState } from 'react'
 
 //set a nice landing page. This is the first thing people will see
 //should contain login in section
 
 const HomePage = () => {
+
   return (
     <div className='mx-[4%] text-gray-700 font-poppins'>
       <div className='hero-image w-full bg-center bg-cover bg-no-repeat h-96 -mt-[32px]'>
@@ -30,14 +32,12 @@ const HomePage = () => {
                       <img src="images/courses.jpg" alt="" className="absolute inset-0 h-52 w-full object-contain" />
                   </div>
                   <div className="p-4 uppercase">
-                      <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">English for children</a></h2>
+                      <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">Area of Effect Damage</a></h2>
                   </div>
                   <hr/>
                   <div className='flex items-center justify-between p-4 text-xs'>
-                    <span className='text-yellow-700'>English</span>
-                    <span>12 weeks</span>
+                    <span className='text-yellow-700'>AOE does blast damage</span>
                   </div>
-                  
               </div>
           </div>
           <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
@@ -46,14 +46,12 @@ const HomePage = () => {
                       <img src="images/courses.jpg" alt="" className="absolute inset-0 h-52 w-full object-contain" />
                   </div>
                   <div className="p-4 uppercase">
-                      <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">English for children</a></h2>
+                      <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">Burst Damage</a></h2>
                   </div>
                   <hr/>
                   <div className='flex items-center justify-between p-4 text-xs'>
-                    <span className='text-yellow-700'>English</span>
-                    <span>12 weeks</span>
+                    <span className='text-yellow-700'>Burst dmg kills rapidly</span>
                   </div>
-                  
               </div>
           </div>
           <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
@@ -62,14 +60,12 @@ const HomePage = () => {
                       <img src="images/courses.jpg" alt="" className="absolute inset-0 h-52 w-full object-contain" />
                   </div>
                   <div className="p-4 uppercase">
-                      <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">English for children</a></h2>
+                      <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">Single Target Damage</a></h2>
                   </div>
                   <hr/>
                   <div className='flex items-center justify-between p-4 text-xs'>
-                    <span className='text-yellow-700'>English</span>
-                    <span>12 weeks</span>
+                    <span className='text-yellow-700'>Single Target penetrates</span>
                   </div>
-                  
               </div>
           </div>
           <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
@@ -78,14 +74,12 @@ const HomePage = () => {
                       <img src="images/courses.jpg" alt="" className="absolute inset-0 h-52 w-full object-contain" />
                   </div>
                   <div className="p-4 uppercase">
-                      <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">English for children</a></h2>
+                      <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">Core Training</a></h2>
                   </div>
                   <hr/>
                   <div className='flex items-center justify-between p-4 text-xs'>
-                    <span className='text-yellow-700'>English</span>
-                    <span>12 weeks</span>
+                    <span className='text-yellow-700'>Core training is mandatory</span>
                   </div>
-                  
               </div>
           </div>
         </div>
