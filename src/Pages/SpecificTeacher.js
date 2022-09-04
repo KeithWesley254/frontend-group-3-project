@@ -109,7 +109,7 @@ const SpecificTeacher = () => {
       </div>
     </Container>
     </div>
-            <div>
+            <div className='teachDetails'>
             <Typography variant="h3" className="coinHeader">
                     {teacherDetails.name}
                 </Typography>
@@ -151,7 +151,7 @@ const SpecificTeacher = () => {
                         </Typography>
                         &nbsp; &nbsp;
                         <Typography variant="h5">
-                            {all_students.map((student) => <p>{student}</p>)}
+                            {all_students.map((student) => <li>{student}</li> )}
                         </Typography>
                     </span>
                 </div>
