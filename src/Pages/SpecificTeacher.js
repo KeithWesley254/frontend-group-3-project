@@ -43,6 +43,7 @@ const SpecificTeacher = () => {
                             {teacherDetails.street_address}
                         </Typography>
                     </span>
+                    <br />
                     <span style={{ display: "flex" }}>
                         <Typography variant="h5" className="teach4" style={{fontWeight: 'bold'}}>
                             Salary:

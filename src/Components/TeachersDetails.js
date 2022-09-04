@@ -8,8 +8,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useNavigate } from 'react-router-dom';
+import { Box, Button } from '@mui/material';
 
-function TeachersDetails({allTeachers}){
+function TeachersDetails({allTeachers, deleteTeacher}){
     
     const navigate = useNavigate();
 
@@ -38,10 +39,12 @@ function TeachersDetails({allTeachers}){
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
+          <StyledTableCell>Lecturer_id</StyledTableCell>
             <StyledTableCell>Lecturer_Name</StyledTableCell>
             <StyledTableCell align="right">Specialisation</StyledTableCell>
             <StyledTableCell align="right">Street_address</StyledTableCell>
             <StyledTableCell align="right">Monthly_Salary&nbsp;($)</StyledTableCell>
+            <StyledTableCell align="right">Excommunicado</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -51,12 +54,29 @@ function TeachersDetails({allTeachers}){
             onClick={() => navigate(`/teachers/${teacher.id}`)}
             style={{cursor: "pointer"}}
             >
+              <StyledTableCell align="left">{teacher.id}</StyledTableCell>
               <StyledTableCell component="th" scope="row">
                 {teacher.name}
               </StyledTableCell>
               <StyledTableCell align="right">{teacher.specialisation}</StyledTableCell>
               <StyledTableCell align="right">{teacher.street_address}</StyledTableCell>
               <StyledTableCell align="right">{teacher.salary}</StyledTableCell>
+              <Box
+                m={1}
+                display="flex"
+                justifyContent="flex-end"
+                alignItems="flex-end"
+              >
+                <Button 
+                variant="outlined" 
+                color="error"
+                onClick={() => {
+                  deleteTeacher(teacher.id);
+                }}
+                >
+                  Delete
+                </Button>
+              </Box>
             </StyledTableRow>
           ))}
         </TableBody>

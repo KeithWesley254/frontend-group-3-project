@@ -17,12 +17,23 @@ const TeachersPage = () => {
 
   function handlePosting(data){
     setAllTeachers([...allTeachers, data])
-}
+  }
+
+  function deleteTeacher(id){
+    fetch(`https://group-3-backend-app.herokuapp.com/teachers/${id}`,{
+        method: "DELETE",
+    })
+    .then(r => r.json())
+    .then(() => {
+        const goThru = allTeachers.filter((teacher) => teacher.id !== id)
+            setAllTeachers(goThru)
+        })
+    }
 
   return (
     <div>
       <TeacherForm handlePosting={handlePosting}/>
-      <TeachersDetails allTeachers = {allTeachers}/>
+      <TeachersDetails allTeachers = {allTeachers} deleteTeacher={deleteTeacher}/>
     </div>
   )
 }
