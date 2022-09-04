@@ -11,8 +11,8 @@ const StudentsPage = () => {
 
   //custom hook
   // function useFetchStudents()
-  
-    //CRUD-GET 
+
+    //CRUD-GET
     const getData = () => {
       fetch(url)
         .then((res) => res.json())
@@ -26,10 +26,10 @@ const StudentsPage = () => {
     }, []);
 
   //DELETE
-  
+
   const deleteData = () => {
     // Simple DELETE request with fetch
-    fetch(url, {
+    fetch(` https://group-3-backend-app.herokuapp.com/students`, {
       method: 'DELETE'
     })
       .then(() => this.setState({ status: 'Delete successful' }));
@@ -43,7 +43,8 @@ const StudentsPage = () => {
     width: "80%",
     margin: "20px 10%"
   }
-  
+
+
 
   return (
     <>
@@ -68,7 +69,7 @@ const StudentsPage = () => {
                 variant="contained"
                 color="secondary"
                 style={{ margin: "0px 20px" }}
-                onClick={() => deleteData(data.id)}
+                onClick={() => deleteData}
               >
                 Edit
               </Button>
@@ -76,7 +77,7 @@ const StudentsPage = () => {
                 variant="contained"
                 color="secondary"
                 style={{ margin: "0px 20px" }}
-                onClick={() => deleteData(data.id)}
+                onClick={() => deleteData}
               >
                 Delete
               </Button>
@@ -95,6 +96,6 @@ const StudentsPage = () => {
     </Button>
     </>
   );
-}
+  }
 
 export default StudentsPage
