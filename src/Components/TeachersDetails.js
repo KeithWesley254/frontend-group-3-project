@@ -7,8 +7,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { useNavigate } from 'react-router-dom';
 
 function TeachersDetails({allTeachers}){
+    
+    const navigate = useNavigate();
 
     const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -35,15 +38,19 @@ function TeachersDetails({allTeachers}){
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Name</StyledTableCell>
-            <StyledTableCell align="right">specialisation</StyledTableCell>
+            <StyledTableCell>Lecturer_Name</StyledTableCell>
+            <StyledTableCell align="right">Specialisation</StyledTableCell>
             <StyledTableCell align="right">Street_address</StyledTableCell>
-            <StyledTableCell align="right">Salary</StyledTableCell>
+            <StyledTableCell align="right">Monthly_Salary&nbsp;($)</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {allTeachers.map((teacher) => (
-            <StyledTableRow key={teacher.id}>
+            <StyledTableRow 
+            key={teacher.id}
+            onClick={() => navigate(`/teachers/${teacher.id}`)}
+            style={{cursor: "pointer"}}
+            >
               <StyledTableCell component="th" scope="row">
                 {teacher.name}
               </StyledTableCell>
