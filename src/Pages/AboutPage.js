@@ -1,11 +1,11 @@
 const AboutPage = () => {
   return (  
     <div className="about">
-      <h1 className="test">
-        About Us
-      </h1>
+      <h1 className="test">About Us</h1>
+       
+   <img src="https://cdn.pixabay.com/photo/2017/08/01/00/38/man-2562325_960_720.jpg" alt="student using a laptop" ></img>
       <p className="test1">
-      This is a School Management Software that helps to increase teachers’ engagement with students.
+      This is a School Management Software that helps to increase teachers engagement with students.
        It offers understandable analytics and graphics that enable you to make data-driven decisions. 
        This is one of the best School Management Software that simplifies admissions, enrollment, registrations, and many other processes.
 
