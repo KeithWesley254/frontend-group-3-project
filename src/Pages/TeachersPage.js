@@ -30,9 +30,20 @@ const TeachersPage = () => {
         })
     }
 
+    function handleUpdateTeach(updatedTeacher) {
+      const updatedTeach = allTeachers.map((teacher) => {
+        if (teacher.id === updatedTeacher.id) {
+          return updatedTeacher;
+        } else {
+          return teacher;
+        }
+      });
+      setAllTeachers(updatedTeach);
+    }
+
   return (
     <div>
-      <TeacherForm handlePosting={handlePosting}/>
+      <TeacherForm handlePosting={handlePosting} onUpdateTeach={handleUpdateTeach}/>
       <TeachersDetails allTeachers = {allTeachers} deleteTeacher={deleteTeacher}/>
     </div>
   )

@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, FormHelperText, Input, InputLabel, ThemeProvider } from '@mui/material';
+import { Box, Button, FormControl, FormHelperText, Input, InputLabel } from '@mui/material';
 import React, { useState } from 'react'
 import { Container } from '@mui/system';
 
@@ -36,7 +36,7 @@ const TeacherForm = ({handlePosting}) => {
         setFormData({
             ...formData, [e.target.name]: e.target.value,
         });
-    }
+    }  
 
   return (
     <div>
@@ -51,7 +51,7 @@ const TeacherForm = ({handlePosting}) => {
         <FormControl sx={{ m: 1, width: '35ch' }}>
             <InputLabel>Full Name</InputLabel>
             <Input name="name" value={formData.name} onChange={handleChange}/>
-            <FormHelperText>Please enter full name</FormHelperText>
+            <FormHelperText>Please Enter Full Name</FormHelperText>
         </FormControl>
       </div>
       <div>
