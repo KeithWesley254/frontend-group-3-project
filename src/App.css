@@ -28,4 +28,8 @@
 .hero-image {
   background-image: url('../public/images/hero-header.jpeg');
 }
+.nav3{
+  font-size: x-large;
+  font-weight: 500;
+}
 
