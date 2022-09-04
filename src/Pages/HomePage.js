@@ -1,5 +1,4 @@
-import { LinearProgress } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 //set a nice landing page. This is the first thing people will see
 //should contain login in section
