@@ -21,6 +21,7 @@ code {
 .test2{
   font-style: italic;
   font-size: larger;
+  color:blue;
 }
 ul{
   display:block;
@@ -30,3 +31,9 @@ ul{
   margin-inline-end: 0px;
   padding-inline-start: 40px;
 }
+img{
+   vertical-align:middle;
+  margin:50px 100px; 
+  
+}
+

@@ -7,6 +7,23 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #93C5FD;
+  height: 150px;
+}
+.title1{
+  margin-left: -40px;
+  font-size: x-large;
+}
+.btn-nav{
+  border-radius: 4px;
+  background-color: aliceblue;
+  font-size: large;
+  width: 50px;
+}
 
 .hero-image {
   background-image: url('../public/images/hero-header.jpeg');
