@@ -5,7 +5,7 @@ import { Table, TableCell, TableRow, TableHead, TableBody, Button } from "@mui/m
 //We need to edit students details, add, or delete
 
 const StudentsPage = () => {
-  const [data, setData] = useState([]);
+  const [students, setAllStudents] = useState([]);
 
   const url = ' https://group-3-backend-app.herokuapp.com/students'
 
@@ -18,7 +18,7 @@ const StudentsPage = () => {
         .then((res) => res.json())
         .then((data) => {
           console.log(data)
-          setData(data)
+          setAllStudents(data)
         });
     };
     useEffect(() => {
@@ -27,12 +27,15 @@ const StudentsPage = () => {
 
   //DELETE
 
-  const deleteData = () => {
-    // Simple DELETE request with fetch
-    fetch(` https://group-3-backend-app.herokuapp.com/students`, {
-      method: 'DELETE'
+  function deleteStudent(id){
+    fetch(`https://group-3-backend-app.herokuapp.com/students/${id}`,{
+        method: "DELETE",
     })
-      .then(() => this.setState({ status: 'Delete successful' }));
+    .then(r => r.json())
+    .then(() => {
+        const goThru = students.filter((student) => student.id !== id)
+            setAllStudents(goThru)
+        })
   }
 
   //POST
@@ -58,18 +61,17 @@ const StudentsPage = () => {
         </TableRow>
       </TableHead>
       <TableBody>
-        {data.map((data) => (
-          <TableRow key={data.id}>
-            <TableCell>{data.id}</TableCell>
-            <TableCell>{data.name}</TableCell>
-            <TableCell>{data.course_id}</TableCell>
-            <TableCell>{data.teacher_id}</TableCell>
+        {students.map((student) => (
+          <TableRow key={student.id}>
+            <TableCell>{student.id}</TableCell>
+            <TableCell>{student.name}</TableCell>
+            <TableCell>{student.course_id}</TableCell>
+            <TableCell>{student.teacher_id}</TableCell>
             <TableCell>
               <Button
                 variant="contained"
                 color="secondary"
                 style={{ margin: "0px 20px" }}
-                onClick={() => deleteData}
               >
                 Edit
               </Button>
@@ -77,7 +79,10 @@ const StudentsPage = () => {
                 variant="contained"
                 color="secondary"
                 style={{ margin: "0px 20px" }}
-                onClick={() => deleteData}
+                onClick={() => {
+                  deleteStudent(student.id)
+                }
+                }
               >
                 Delete
               </Button>
