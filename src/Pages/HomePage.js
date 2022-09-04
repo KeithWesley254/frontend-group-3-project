@@ -6,7 +6,7 @@ import React from 'react'
 const HomePage = () => {
 
   return (
-    <div className='mx-[4%] text-gray-700 font-poppins'>
+    <div className='homepage'>
       <div className='hero-image w-full bg-center bg-cover bg-no-repeat h-96 -mt-[32px]'>
         <div className='flex items-center justify-center w-1/2 h-96'>
           <div className='flex flex-col justify-center'>
@@ -20,7 +20,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Courses */}
       <div className='mt-12'>
         <h2 className='font-averia text-3xl font-light'>Courses</h2>
