@@ -19,7 +19,7 @@ const AboutPage = () => {
             <li>Offers custom reporting facility.</li>
             <li>Provides easy migration of school data.</li>
              <li>This app can make the school administration process easy.</li>
-             <li> Demo: Yes</li>
+             <li> Demo: Yes.</li>
              <li> Mobile App: Yes</li>
             
         </ul>
