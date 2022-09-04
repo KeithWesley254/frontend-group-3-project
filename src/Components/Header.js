@@ -5,20 +5,20 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div>
-      <div className='flex justify-between p-8 fixed w-full text-gray-600 bg-blue-300'>
-        <div className='text-3xl font-large'>
-            <NavLink to="/" exact="true">Dragonballs University Portal</NavLink>
-        </div>
-        <div className='text-xl'>
+    <div className='nav'>
+      <div className='title1'> <h2>Dragonballs University Portal</h2></div>
+      <div className='title2'>
             <NavLink to="/" exact="true" className='mr-10 hover:text-white'>Home</NavLink>
             <NavLink to="/courses" exact="true" className='mr-10 hover:text-white'>Courses</NavLink>
             <NavLink to="/students" exact="true" className='mr-10 hover:text-white'>Students</NavLink>
             <NavLink to="/teachers" exact="true" className='mr-10 hover:text-white'>Teachers</NavLink>
             <NavLink to="/about" exact="true" className='mr-10 hover:text-white'>About</NavLink>
-            <button className='border-2 bg-white rounded-md hover:bg-white px-8 py-2'>Enroll</button>
-        </div>
-      </div>
+            <button className='btn-nav'>Enroll</button>
+            </div>
+
+
+
+
     </div>
   )
 }
