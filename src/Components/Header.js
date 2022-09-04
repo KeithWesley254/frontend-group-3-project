@@ -8,7 +8,6 @@ const Header = () => {
     <div className='nav'>
       <div className='title1'>
             <NavLink to="/" exact="true" className='relative'>
-              <img src='/images/dragonball.png' alt='logoImg' className='absolute w-[75px] h-16 -top-4 left-0 -z-10'/>
               <span className='ml-8'><span className='nav3'>D</span>ragonballs University Portal</span>
             </NavLink>
         </div>
