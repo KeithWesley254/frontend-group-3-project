@@ -31,6 +31,10 @@
 .nav3{
   font-size: x-large;
   font-weight: 500;
+  margin-left: -100px;
+}
+.homepage{
+  margin-top: 30px;
 }
 
 .teachDetails {
