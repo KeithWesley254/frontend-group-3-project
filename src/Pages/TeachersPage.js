@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import TeacherForm from '../Components/TeacherForm';
 import TeachersDetails from '../Components/TeachersDetails';
 //We need all teachers to be displayed here
 //We need to edit teachers details, add, or delete
@@ -14,8 +15,13 @@ const TeachersPage = () => {
 
   // console.log(allTeachers)
 
+  function handlePosting(data){
+    setAllTeachers([...allTeachers, data])
+}
+
   return (
     <div>
+      <TeacherForm handlePosting={handlePosting}/>
       <TeachersDetails allTeachers = {allTeachers}/>
     </div>
   )
