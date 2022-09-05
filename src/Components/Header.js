@@ -5,14 +5,20 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
+<<<<<<< HEAD
     <div className='mb-36 relative'>
       <div className='flex justify-between p-8 fixed w-full top-0 text-gray-600 bg-blue-50 z-40 font-averia'>
         <div className='text-3xl font-large'>
+=======
+    <div className='nav'>
+      <div className='title1'>
+>>>>>>> 50a43bfd8bf4a66155b07b07e277833fb1a59739
             <NavLink to="/" exact="true" className='relative'>
               <img src='/images/dragonball.png' alt='logoImg' className='absolute w-[75px] h-16 -top-4 left-0 -z-10'/>
               <span className='ml-8'><strong className='mr-[18px]'><span className='-ml-1'>D</span></strong>ragonballs University Portal</span>
             </NavLink>
         </div>
+<<<<<<< HEAD
         <div className='text-xl'>
             <NavLink to="/" exact="true" className='mr-10 hover:text-white transition duration-150'>Home</NavLink>
             <NavLink to="/courses" exact="true" className='mr-10 hover:text-white transition duration-150'>Courses</NavLink>
@@ -23,6 +29,17 @@ const Header = () => {
         </div>
       </div>
     </div>
+=======
+      <div className='title2'>
+            <NavLink to="/" exact="true" className='mr-10 hover:text-white'>Home</NavLink>
+            <NavLink to="/courses" exact="true" className='mr-10 hover:text-white'>Courses</NavLink>
+            <NavLink to="/students" exact="true" className='mr-10 hover:text-white'>Students</NavLink>
+            <NavLink to="/teachers" exact="true" className='mr-10 hover:text-white'>Teachers</NavLink>
+            <NavLink to="/about" exact="true" className='mr-10 hover:text-white'>About</NavLink>
+            <button className='btn-nav'>Enroll</button>
+            </div>
+      </div>
+>>>>>>> 50a43bfd8bf4a66155b07b07e277833fb1a59739
   )
 }
 
