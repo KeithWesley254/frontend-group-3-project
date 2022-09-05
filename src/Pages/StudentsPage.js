@@ -9,8 +9,6 @@ const StudentsPage = () => {
 
   const url = ' https://group-3-backend-app.herokuapp.com/students'
 
-  //custom hook
-  // function useFetchStudents()
 
     //CRUD-GET
     const getData = () => {
