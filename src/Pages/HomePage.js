@@ -1,9 +1,18 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 
 //set a nice landing page. This is the first thing people will see
 //should contain login in section
 
 const HomePage = () => {
+
+  const [courses, setCourses] = useState([])
+  
+useEffect( () => {
+  fetch("https://group-3-backend-app.herokuapp.com/courses")
+  .then(res => res.json())
+  .then(rosemary => setCourses(rosemary))
+},[])
+
 
   return (
       <div className='mx-[4%] text-gray-700 font-poppins'>
@@ -24,73 +33,36 @@ const HomePage = () => {
         {/* Courses */}
         <div className='mt-12'>
           <h2 className='font-averia text-3xl font-light'>Courses</h2>
-          <div className='w-full flex justify-center space-x-10'>
+            <div className='w-full flex justify-center space-x-10'>
             <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <div className="block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden h-80">
-                    <div className="relative pb-48 overflow-hidden">
-                        <img src="images/courses.jpg" alt="" className="absolute inset-0 h-52 w-full object-contain" />
-                    </div>
-                    <div className="p-4 uppercase">
-                        <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">English for children</a></h2>
-                    </div>
-                    <hr/>
-                    <div className='flex items-center justify-between p-4 text-xs'>
-                      <span className='text-yellow-700'>English</span>
-                      <span>12 weeks</span>
-                    </div>
-  
-                </div>
+        {courses.map((course) => {
+          return (
+            <div className="block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden h-80">
+            <div className="relative pb-48 overflow-hidden">
+                <img src="images/courses.jpg" alt="" className="absolute inset-0 h-52 w-full object-contain" />
             </div>
-            <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <div className="block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden h-80">
-                    <div className="relative pb-48 overflow-hidden">
-                        <img src="images/courses.jpg" alt="" className="absolute inset-0 h-52 w-full object-contain" />
-                    </div>
-                    <div className="p-4 uppercase">
-                        <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">English for children</a></h2>
-                    </div>
-                    <hr/>
-                    <div className='flex items-center justify-between p-4 text-xs'>
-                      <span className='text-yellow-700'>English</span>
-                      <span>12 weeks</span>
-                    </div>
-  
-                </div>
+            <div className="p-4 uppercase">
+                <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">{course.course_name}</a></h2>
             </div>
-            <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <div className="block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden h-80">
-                    <div className="relative pb-48 overflow-hidden">
-                        <img src="images/courses.jpg" alt="" className="absolute inset-0 h-52 w-full object-contain" />
-                    </div>
-                    <div className="p-4 uppercase">
-                        <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">English for children</a></h2>
-                    </div>
-                    <hr/>
-                    <div className='flex items-center justify-between p-4 text-xs'>
-                      <span className='text-yellow-700'>English</span>
-                      <span>12 weeks</span>
-                    </div>
-  
-                </div>
+            <hr/>
+            <div className='flex items-center justify-between p-4 text-xs'>
+              <span>{course.course_period}  weeks</span>
             </div>
-            <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <div className="block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden h-80">
-                    <div className="relative pb-48 overflow-hidden">
-                        <img src="images/courses.jpg" alt="" className="absolute inset-0 h-52 w-full object-contain" />
-                    </div>
-                    <div className="p-4 uppercase">
-                        <h2 className="mt-2 mb-2 text-base font-semibold text-bethel-blue hover:text-blue-400"><a href="/posts/bethel-kibera-education-program">English for children</a></h2>
-                    </div>
-                    <hr/>
-                    <div className='flex items-center justify-between p-4 text-xs'>
-                      <span className='text-yellow-700'>English</span>
-                      <span>12 weeks</span>
-                    </div>
-  
-                </div>
+        </div>
+          )
+        })}
             </div>
           </div>
         </div>
+
+            <div>
+              <h2 className='font-averia text-3xl font-light'>Instructors</h2>
+              <div>
+
+              </div>
+            </div>
+
+
       </div>
   )
 }
