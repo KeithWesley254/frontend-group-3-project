@@ -18,6 +18,11 @@ code {
 .about{
   font-size: larger;
 }
+
+.about-header {
+  margin: auto;
+}
+
 .test2{
   font-style: italic;
   font-size: larger;
