@@ -9,7 +9,7 @@ const Header = () => {
       <div className='flex justify-between p-8 fixed w-full top-0 text-gray-600 bg-blue-50 z-40 font-averia'>
         <div className='text-3xl font-large'>
             <NavLink to="/" exact="true" className='relative'>
-              <img src='/images/dragonball.png' alt='logoImg' className='absolute w-[75px] h-16 -top-8 -left-20 -z-10'/>
+              <img src='/images/dragonball.png' alt='logoImg' className='absolute w-[75px] h-16 -top-5 left-18 -z-10'/>
               <span className='ml-8'><strong className='mr-[18px]'><span className='-ml-1'>D</span></strong>ragonballs University Portal</span>
             </NavLink>
         </div>
