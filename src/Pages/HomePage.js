@@ -26,7 +26,6 @@ useEffect( () => {
               <p>Engaging all students in partnership with family and community to become informed, compassionate and global citizens.</p>
             </div>
             <div className='flex space-x-4'>
-              <button className='rounded-full px-6 py-1.5 text-gray-800 bg-gradient-to-r from-yellow-600 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-700 hover:to-yellow-400 hover:text-white transition duration-150'>Sign Up</button>
               <button className='border-2 border-yellow-600 rounded-full hover:text-white hover:bg-yellow-600 px-6 py-1.5 transition duration-150' onClick={() => navigate(`/about`)}>Learn more</button>
             </div>
           </div>
