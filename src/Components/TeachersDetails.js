@@ -68,7 +68,7 @@ function TeachersDetails({allTeachers, deleteTeacher}){
                 alignItems="flex-end"
               >
                 <Button 
-                variant="outlined" 
+                variant="contained" 
                 color="error"
                 onClick={() => {
                   deleteTeacher(teacher.id);
