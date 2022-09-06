@@ -19,6 +19,13 @@ code {
   font-size: larger;
 }
 
+.about-image {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-content: center;
+  margin: 2rem;
+}
 .about-header {
   margin: auto;
 }
@@ -26,7 +33,7 @@ code {
 .test2{
   font-style: italic;
   font-size: larger;
-  color:blue;
+ color:cadetblue;
 }
 ul{
   display:block;
@@ -35,10 +42,24 @@ ul{
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 40px;
+  list-style: disc;
 }
 img{
    vertical-align:middle;
   /* margin:50px 100px;  */
   
+}
+.test{
+  color:darkcyan;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+  ;
+}
+.test3{
+  color:cadetblue;
+  font-size: larger;
+  font-weight: bolder;
+  font-style: oblique;
 }
 

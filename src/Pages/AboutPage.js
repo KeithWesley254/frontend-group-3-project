@@ -1,11 +1,11 @@
 const AboutPage = () => {
   return (  
     <div className="about">
-      <h1 className="test inline-block p-10">About Us</h1>
+      {/* <h1 className="test inline-block p-10">About Us</h1> */}
 
 
 
-      <div className="flex">
+      <div className="about-image">
       <img src="https://cdn.pixabay.com/photo/2017/08/01/00/38/man-2562325_960_720.jpg" alt="student using a laptop" ></img>
       <div>
 
@@ -15,7 +15,7 @@ const AboutPage = () => {
        It offers understandable analytics and graphics that enable you to make data-driven decisions. 
        This is one of the best School Management Software that simplifies admissions, enrollment, registrations, and many other processes.
 
-      <h3><div className="test2">Features:</div></h3>
+      <h2><div className="test2">Features:</div></h2>
 
         <ul>
             <li>Personalized learning schedules</li>
@@ -30,6 +30,19 @@ const AboutPage = () => {
             
         </ul>
       </p>
+      <h3>
+        <div className="test3">FOUNDERS:</div>
+        <ul >
+          <li>Keith Wesly</li>
+          <li>RoseMary Njeri</li>
+          <li>Mark Brian</li>
+          <li>Jeska Jenipher</li>
+          <li>Martin Kuria</li>
+          <li>Mercy Wangui</li>
+          <li>Jerry Johns</li>
+        </ul>
+      </h3>
+      
       </div>
        
    
