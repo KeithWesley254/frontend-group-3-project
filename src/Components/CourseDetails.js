@@ -52,7 +52,7 @@ function CourseDetails({allCourses, deleteCourse}){
           {allCourses.map((course) => (
             <StyledTableRow 
             key={course.id}
-            onClick={() => navigate(`/courses/edit/${course.id}`)}
+            onClick={() => navigate(`/courses/${course.id}`)}
             style={{cursor: "pointer"}}
             >
               <StyledTableCell align="left">{course.id}</StyledTableCell>

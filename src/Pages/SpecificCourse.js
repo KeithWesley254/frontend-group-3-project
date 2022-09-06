@@ -7,6 +7,7 @@ const SpecificCourse = () => {
     const { id } = useParams();
     const [specificCourse, setSpecificCourse] = useState();
     const [formData, setFormData] = useState({
+        course_name: '',
         course_period: '',
         total_units: '',
         fees_amount: '',
@@ -46,6 +47,7 @@ const SpecificCourse = () => {
         })
 
         setFormData({
+            course_name: '',
             course_period: '',
             total_units: '',
             fees_amount: '',
@@ -61,6 +63,13 @@ const SpecificCourse = () => {
         Edit Course Form
     </div>
     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+    <div>
+        <FormControl sx={{ m: 1, width: '35ch' }}>
+            <InputLabel>Course Name</InputLabel>
+            <Input name="course_name" value={formData.course_name} onChange={handleChange}/>
+            <FormHelperText>Enter Course Name</FormHelperText>
+        </FormControl>
+      </div>
       <div>
       <FormControl sx={{ m: 1, width: '35ch' }}>
         <InputLabel>Course Period</InputLabel>
@@ -96,7 +105,17 @@ const SpecificCourse = () => {
                 <div className="teach1">
                     <span style={{ display: "flex" }}>
                         <Typography variant="h5" className="teach2" style={{fontWeight: 'bold'}}>
-                            Course_period:
+                            Course_Name:
+                        </Typography>
+                        &nbsp; &nbsp;
+                        <Typography variant="h5">
+                            {specificCourse.course_name}
+                        </Typography>
+                    </span>
+                    <br />
+                    <span style={{ display: "flex" }}>
+                        <Typography variant="h5" className="teach2" style={{fontWeight: 'bold'}}>
+                            Course_Period:
                         </Typography>
                         &nbsp; &nbsp;
                         <Typography variant="h5">
