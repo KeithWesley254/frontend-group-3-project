@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 
 //set a nice landing page. This is the first thing people will see
 //should contain login in section
@@ -6,6 +7,8 @@ import React,{useEffect, useState} from 'react'
 const HomePage = () => {
 
   const [courses, setCourses] = useState([])
+
+  const navigate = useNavigate();
   
 useEffect( () => {
   fetch("https://group-3-backend-app.herokuapp.com/courses")
@@ -23,8 +26,8 @@ useEffect( () => {
               <p>Engaging all students in partnership with family and community to become informed, compassionate and global citizens.</p>
             </div>
             <div className='flex space-x-4'>
-              <button className='rounded-full px-6 py-1.5 bg-gradient-to-r from-yellow-600 to-yellow-500 text-white'>Sign Up</button>
-              <button className='border-2 border-yellow-600 rounded-full px-6 py-1.5'>Learn more</button>
+              <button className='rounded-full px-6 py-1.5 text-gray-800 bg-gradient-to-r from-yellow-600 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-700 hover:to-yellow-400 hover:text-white transition duration-150'>Sign Up</button>
+              <button className='border-2 border-yellow-600 rounded-full hover:text-white hover:bg-yellow-600 px-6 py-1.5 transition duration-150' onClick={() => navigate(`/about`)}>Learn more</button>
             </div>
           </div>
         </div>

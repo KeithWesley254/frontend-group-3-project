@@ -19,7 +19,7 @@ const Header = () => {
             <NavLink to="/students" exact="true" className='mr-10 hover:text-yellow-600 transition duration-150'>Students</NavLink>
             <NavLink to="/teachers" exact="true" className='mr-10 hover:text-yellow-600 transition duration-150'>Teachers</NavLink>
             <NavLink to="/about" exact="true" className='mr-10 hover:text-yellow-600 transition duration-150'>About</NavLink>
-            <button className='border-2 bg-white rounded-md hover:bg-yellow-600 px-8 py-2'>Enroll</button>
+            <button className='border-2 bg-white rounded-md hover:bg-yellow-600 px-8 py-2 transition duration-150  hover:text-white'>Enroll</button>
         </div>
       </div>
     </div>
