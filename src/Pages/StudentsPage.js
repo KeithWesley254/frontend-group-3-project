@@ -70,13 +70,6 @@ const StudentsPage = () => {
                 variant="contained"
                 color="secondary"
                 style={{ margin: "0px 20px" }}
-              >
-                Edit
-              </Button>
-              <Button
-                variant="contained"
-                color="secondary"
-                style={{ margin: "0px 20px" }}
                 onClick={() => {
                   deleteStudent(student.id)
                 }
@@ -89,14 +82,6 @@ const StudentsPage = () => {
         ))}
       </TableBody>
     </Table>
-
-    <Button
-     variant="contained"
-     color="secondary"
-     style={{ margin: "0px 20px", marginLeft: 300, borderRadius: 25,width:250 }}
-    >
-     Enroll
-    </Button>
     </>
   );
   }

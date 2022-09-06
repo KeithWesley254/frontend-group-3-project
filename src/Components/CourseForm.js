@@ -7,6 +7,7 @@ const CourseForm = ({handlePosting}) => {
         course_name: '',
         course_period: '',
         total_units: '',
+        fees_amount: '',
     })
 
     function handleSubmit(e){
@@ -27,6 +28,7 @@ const CourseForm = ({handlePosting}) => {
             course_name: '',
             course_period: '',
             total_units: '',
+            fees_amount: '',
         })
     }
 
@@ -64,6 +66,13 @@ const CourseForm = ({handlePosting}) => {
             <InputLabel>Total_units</InputLabel>
             <Input name="total_units" value={formData.total_units} onChange={handleChange}/>
             <FormHelperText>Enter Total Units</FormHelperText>
+        </FormControl>
+      </div>
+      <div>
+        <FormControl sx={{ m: 1, width: '35ch' }}>
+            <InputLabel>Fees Amount</InputLabel>
+            <Input name="fees_amount" value={formData.fees_amount} onChange={handleChange}/>
+            <FormHelperText>Enter Fees Amount</FormHelperText>
         </FormControl>
       </div>
     </Box>

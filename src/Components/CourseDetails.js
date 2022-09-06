@@ -43,6 +43,7 @@ function CourseDetails({allCourses, deleteCourse}){
             <StyledTableCell>Course_Name</StyledTableCell>
             <StyledTableCell align="right">Course_period</StyledTableCell>
             <StyledTableCell align="right">Total_units</StyledTableCell>
+            <StyledTableCell align="right">Fees_amount</StyledTableCell>
             <StyledTableCell align="right">Edit_details</StyledTableCell>
             <StyledTableCell align="right">Excommunicado</StyledTableCell>
           </TableRow>
@@ -60,6 +61,7 @@ function CourseDetails({allCourses, deleteCourse}){
               </StyledTableCell>
               <StyledTableCell align="right">{course.course_period}</StyledTableCell>
               <StyledTableCell align="right">{course.total_units}</StyledTableCell>
+              <StyledTableCell align="right">{course.fees_amount}</StyledTableCell>
               <StyledTableCell align="right">
               <Box
                 m={1}

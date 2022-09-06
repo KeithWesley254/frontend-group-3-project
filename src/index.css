@@ -18,6 +18,11 @@ code {
 .about{
   font-size: larger;
 }
+
+.about-header {
+  margin: auto;
+}
+
 .test2{
   font-style: italic;
   font-size: larger;
@@ -33,7 +38,7 @@ ul{
 }
 img{
    vertical-align:middle;
-  margin:50px 100px; 
+  /* margin:50px 100px;  */
   
 }
 
