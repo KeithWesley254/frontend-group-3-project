@@ -5,22 +5,26 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div className='nav'>
-      <div className='title1'>
+    <div className='mb-36 relative'>
+      <div className='flex justify-between p-8 fixed w-full top-0 text-gray-600 bg-blue-50 z-40 font-averia'>
+        <div className='text-3xl font-large'>
             <NavLink to="/" exact="true" className='relative'>
-              <span className='ml-8'><span className='nav3'>D</span>ragonballs University Portal</span>
+              <img src='/images/dragonball.png' alt='logoImg' className='absolute w-[75px] h-16 -top-8 -left-20 -z-10'/>
+              <span className='ml-8'><strong className='mr-[18px]'><span className='-ml-1'>D</span></strong>ragonballs University Portal</span>
             </NavLink>
         </div>
-      <div className='title2'>
-            <NavLink to="/" exact="true" className='mr-10 hover:text-white'>Home</NavLink>
-            <NavLink to="/courses" exact="true" className='mr-10 hover:text-white'>Courses</NavLink>
-            <NavLink to="/students" exact="true" className='mr-10 hover:text-white'>Students</NavLink>
-            <NavLink to="/teachers" exact="true" className='mr-10 hover:text-white'>Teachers</NavLink>
-            <NavLink to="/about" exact="true" className='mr-10 hover:text-white'>About</NavLink>
-            <button className='btn-nav'>Enroll</button>
-            </div>
+        <div className='text-xl'>
+            <NavLink to="/" exact="true" className='mr-10 hover:text-yellow-600 transition duration-150'>Home</NavLink>
+            <NavLink to="/courses" exact="true" className='mr-10 hover:text-yellow-600 transition duration-150'>Courses</NavLink>
+            <NavLink to="/students" exact="true" className='mr-10 hover:text-yellow-600 transition duration-150'>Students</NavLink>
+            <NavLink to="/teachers" exact="true" className='mr-10 hover:text-yellow-600 transition duration-150'>Teachers</NavLink>
+            <NavLink to="/about" exact="true" className='mr-10 hover:text-yellow-600 transition duration-150'>About</NavLink>
+            <button className='border-2 bg-white rounded-md hover:bg-yellow-600 px-8 py-2'>Enroll</button>
+        </div>
       </div>
+    </div>
   )
 }
 
 export default Header
+
