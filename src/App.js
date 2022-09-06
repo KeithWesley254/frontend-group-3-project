@@ -7,6 +7,7 @@ import TeachersPage from './Pages/TeachersPage';
 import AboutPage from './Pages/AboutPage';
 import CoursesPage from './Pages/CoursesPage';
 import SpecificTeacher from './Pages/SpecificTeacher';
+import SpecificCourse from './Pages/SpecificCourse';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/students' element={<StudentsPage />}/>
         <Route path='/about' element={<AboutPage />}/>
         <Route path='/teachers/:id' element={<SpecificTeacher />}/>
+        <Route path='/courses/:id' element={<SpecificCourse />}/>
       </Routes>
     </div>
     </BrowserRouter>
