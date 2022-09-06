@@ -19,7 +19,7 @@ useEffect( () => {
 
   return (
     <div className='text-gray-700 font-poppins'>
-      <div className='hero-image w-full bg-center bg-cover bg-no-repeat h-96 -mt-[32px]'>
+      <div className='hero-image w-full bg-center bg-cover bg-no-repeat h-96 -mt-[44px]'>
         <div className='mx-[4%] flex items-center justify-center w-1/2 h-96'>
           <div className='flex flex-col justify-center'>
             <div className='mb-6 font-extralight text-2xl font-poppins'>
